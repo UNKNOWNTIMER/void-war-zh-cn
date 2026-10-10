@@ -1,0 +1,22 @@
+{
+  "engine_sha256": [
+    "c35a7bbfb27fdcf4b158a4489d8778479c4683c40fa0111d8f452b2d8aeb7afa",
+    "8952b4e4daa3bb0f01501b069219add83830cc4c0009cc76e258de7ad3b84d12",
+    "27932c30df002bd5890cf681da072db35257f6119de30c154b22e2ae8b4f787b",
+    "84d7a323653ee8836b71f5696adcebee78443a9a4a9eaa0da5bf91da2e62b3b8",
+    "08ca5b5a0ca09e8f32b2e0bc7de12dd04f3e6926c8bc295ef882d89d72fb2d21",
+    "8145505c7c2dffa65876fe6d2a6d3438112faa8bbf2020a777fe60ed80a0b0c7",
+    "668e63f79cdb2a9d620ece2eac3185b7f722e87f15c04fae895c4f1aaf293e46"
+  ],
+  "file_sha256": {
+    "lang/functionText_zh-Hans": [
+      "e3d224c020931c5e393bed0e15eaff11bdbea9ab2d469ac30ab2ee6809de283b"
+    ],
+    "lang/UIText_zh-Hans": [
+      "4dacab79c1f6833c4ba25f2a82225bf778d86662ebe1c7be8ebfa177d434524a"
+    ],
+    "lang/encounterText_zh-Hans": [
+      "66262c684d5a04a63bb4485512ff82322121eb4f96ae2ce44a3f17d3c0548830"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "game": "Void War",
+  "game_version": "1.5.2b",
+  "steam_build_id": "25669267",
+  "release_version": "2026.10.10.3",
+  "language_id": 3,
+  "original_files": [
+    {
+      "path": "data.win",
+      "sha256": "1d8bb23910251b7bc50f1013efbec18ce0cf030894e7d2de50c4bdadfb9f8db9"
+    },
+    {
+      "path": "lang/functionText_zh-Hans",
+      "sha256": "dcc7298c7a706825739048e8d860538b24c237a35cfa23478ba97f2f8dbf3802"
+    },
+    {
+      "path": "lang/UIText_zh-Hans",
+      "sha256": "138ad010b36e447143da6f7976e66cf4a76b90b1dd6818373d5b64fedf89cf55"
+    },
+    {
+      "path": "lang/encounterText_zh-Hans",
+      "sha256": "9d198d309abbf0e825efe42b64c134cc8000fb1746b6ad3f76039b19a4bbc491"
+    }
+  ],
+  "delta": {
+    "format": 1,
+    "source_sha256": "1d8bb23910251b7bc50f1013efbec18ce0cf030894e7d2de50c4bdadfb9f8db9",
+    "target_sha256": "f9a3f8471d84605a286b0245bd48af609ece4bb6cbde90b2804f681fbafb078a",
+    "data_size": 326854624,
+    "segments": 6525,
+    "replacement_bytes": 30447
+  },
+  "delta_sha256": "6f7f0706f052f696015a9ad61c7e6792ff67dd527a1b09807d8d3f29786c03b2",
+  "files": [
+    {
+      "path": "lang/functionText_zh-Hans",
+      "sha256": "3a51d2fe4645bcb61b03d4b7d7f26c8955a23f45559be2a6055f5966e1b0260b",
+      "bytes": 37662
+    },
+    {
+      "path": "lang/UIText_zh-Hans",
+      "sha256": "42b329a0783ef3a804a0ecfc85b795d8b5f3ec4adf0e7c39e9ec2271e4913cff",
+      "bytes": 321501
+    },
+    {
+      "path": "lang/encounterText_zh-Hans",
+      "sha256": "fea4f4adce8222ef7240a73695b72a2056e4e4702f3eda7de590e86f9b2e9469",
+      "bytes": 885905
+    },
+    {
+      "path": "NotoSerifSC-Black.otf",
+      "sha256": "2c2af226af6170ac28730be03b16ee7ffa6144fe54471d9ebe8a03de97b58160",
+      "bytes": 24063000
+    },
+    {
+      "path": "licenses/NotoSerif-OFL.txt",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "bytes": 4301
+    }
+  ],
+  "compatible_previous": {
+    "engine_sha256": [
+      "c35a7bbfb27fdcf4b158a4489d8778479c4683c40fa0111d8f452b2d8aeb7afa",
+      "8952b4e4daa3bb0f01501b069219add83830cc4c0009cc76e258de7ad3b84d12",
+      "27932c30df002bd5890cf681da072db35257f6119de30c154b22e2ae8b4f787b",
+      "84d7a323653ee8836b71f5696adcebee78443a9a4a9eaa0da5bf91da2e62b3b8",
+      "08ca5b5a0ca09e8f32b2e0bc7de12dd04f3e6926c8bc295ef882d89d72fb2d21",
+      "8145505c7c2dffa65876fe6d2a6d3438112faa8bbf2020a777fe60ed80a0b0c7",
+      "668e63f79cdb2a9d620ece2eac3185b7f722e87f15c04fae895c4f1aaf293e46"
+    ],
+    "file_sha256": {
+      "lang/functionText_zh-Hans": [
+        "e3d224c020931c5e393bed0e15eaff11bdbea9ab2d469ac30ab2ee6809de283b"
+      ],
+      "lang/UIText_zh-Hans": [
+        "4dacab79c1f6833c4ba25f2a82225bf778d86662ebe1c7be8ebfa177d434524a"
+      ],
+      "lang/encounterText_zh-Hans": [
+        "66262c684d5a04a63bb4485512ff82322121eb4f96ae2ce44a3f17d3c0548830"
+      ]
+    }
+  },
+  "license": "Font: SIL Open Font License 1.1; see licenses/NotoSerif-OFL.txt",
+  "privacy": "No full game engine, original CSV, save files, or developer paths are included."
+}
