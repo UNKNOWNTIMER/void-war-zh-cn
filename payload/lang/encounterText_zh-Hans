@@ -141,7 +141,7 @@ oTxtAshenWarriorRumors_attack2--text,通讯中传来一个濒死之人的遗言�
 oTxtAshenWarriorRumors_attack2--c0,继续
 oTxtAshenWarriorRumors_ignore--text,你无视他们。帝国飞船不再尝试联系你。
 oTxtAshenWarriorRumors_ignore--c0,继续
-oTxtBldNothing_intro--text,抵达跃迁节点时，你发现了一支阿里奥克小型舰队。他们正忙着别的事，根本没留意到你。你继续前进。
+oTxtBldNothing_intro--text,你平安抵达跃迁节点。忽然，一缕带着铁锈气息的血腥味掠过，转瞬便消散了。你继续前进。
 oTxtBldNothing_intro--c0,继续
 oTxtBloodAltar_intro--text,舰船抵达下一个跃迁节点。远处，一座巨大的深红色祭坛映入眼帘。
 oTxtBloodAltar_intro--c0,调查
@@ -1051,7 +1051,7 @@ oTxtCivilianPossessed_agreeD4--text,诡异的闪电轰击船体，将成群的�
 oTxtCivilianPossessed_agreeD4--c0,继续
 oTxtCivilianPossessed_refuse--text,你拒绝他们。
 oTxtCivilianPossessed_refuse--c0,继续
-oTxtColonyDrop_intro--text,一个极端组织潜入当地一座太空殖民地，威胁要炸毁维持其轨道的聚变支柱。一旦失去支柱，殖民地就会坠向下方的矮行星，掀起核火风暴，席卷其三分之二的宜居陆地。帝国最近的人口普查显示，当地平民人口约为 26.2 十亿。
+oTxtColonyDrop_intro--text,一个极端组织潜入了当地太空殖民地，威胁要炸毁维持其轨道的聚变支柱。一旦失去支柱，殖民地就会坠向下方的矮行星，掀起核火浪潮，席卷其三分之二的宜居陆地。帝国最近的人口普查显示，当地平民约有273亿人。
 oTxtColonyDrop_intro--c0,联系极端分子
 oTxtColonyDrop_intro--c1,继续前进
 oTxtColonyDrop_intro--c2,（引擎 4）为最坏的情况做好准备
@@ -1218,7 +1218,7 @@ oTxtColonyTraining_train3--text,击毁护航舰后，你赶往殖民地。抵达
 oTxtColonyTraining_train3--c0,继续
 oTxtConvoy--text,你靠近护航编队中的一艘运输船。
 oTxtConvoy--c0,继续
-oTxtCoreNothing_intro--text,这里有一座废弃的轨道殖民地。末代居民离开时带走了一切，只留下空荡荡的建筑。你继续前进。
+oTxtCoreNothing_intro--text,你试图在一座前哨站停靠。「停靠申请驳回。你的舰船未列入帝国登记册。」你继续前进。
 oTxtCoreNothing_intro--c0,继续
 oTxtCrewRecallBeforeFight--text,时间紧迫。下一场交战到来前，你迅速启动了召回信标。
 oTxtDeathCultAttackEmpire_intro--text,你发现一艘帝国舰船，正遭到死亡教团重炮舰的攻击。
@@ -1906,7 +1906,7 @@ oTxtDeliverWarRelicQuestFinale_intro_2--text,你捧着沉重的圣物登上克�
 oTxtDeliverWarRelicQuestFinale_intro_2--c0,继续
 oTxtDeliverWarRelicQuestFinale_finale--text,吟唱戛然而止。军阀发出震耳的低吼：「伟大的克罗姆，见证我吧。」随后离开房间。一群教徒抬来一口箱子，里面装满酬谢你此行的报酬。
 oTxtDeliverWarRelicQuestFinale_finale--c0,继续
-oTxtDemNothing_intro--text,你进入一片受到时间异常影响的深空。时间仿佛被拉长、扭曲，但四周依旧空无一物。你继续前进。
+oTxtDemNothing_intro--text,你穿过一片受巨大裂隙风暴影响的深空区域。裂隙中的混乱能量扭曲着四周的景象，但这里依旧空无一物。你继续前进。
 oTxtDemNothing_intro--c0,继续
 oTxtDemonAdriftBlobs_intro--text,你遇到一艘星舰，正静静漂流在裂隙风暴之中。
 oTxtDemonAdriftBlobs_intro--c0,调查
@@ -2366,7 +2366,7 @@ oTxtEmpireCultFleetBattle_leaveFight--text,你将引擎推至全功率，却迎�
 oTxtEmpireCultFleetBattle_leaveFight--c0,继续
 oTxtEmpireCultFleetBattle_leaveFight_win--text,你在几群激战中的星舰之间穿行，终于逃了出来。
 oTxtEmpireCultFleetBattle_leaveFight_win--c0,继续
-oTxtEmpireCultLifepods_intro--text,你遇见一艘帝国舰船，正向附近的太空殖民地开火。居民纷纷逃离猛攻，逃生舱从殖民地向四面八方涌出。帝国舰船的公开广播传来：「VJ-60.699 殖民地公民注意。已在你们之中发现异端活动。奉太阳霸主之命，你们的生命已被剥夺。愿不朽之王怜悯你们的灵魂。」
+oTxtEmpireCultLifepods_intro--text,你遇见一艘帝国舰船，正向附近的太空殖民地开火。居民纷纷逃离猛攻，逃生舱从殖民地向四面八方涌出。帝国舰船的公开广播传来：「HA-19.480 殖民地公民注意。已在你们之中发现异端活动。奉太阳霸主之命，你们的生命已被剥夺。愿不朽之王怜悯你们的灵魂。」 
 oTxtEmpireCultLifepods_intro--c0,攻击帝国舰船
 oTxtEmpireCultLifepods_intro--c1,攻击太空殖民地
 oTxtEmpireCultLifepods_intro--c2,尝试救起几个逃生舱
@@ -2938,7 +2938,7 @@ oTxtEmpireTechnoPursuit_leaveItAlone--text,无论那是什么，看起来都不�
 oTxtEmpireTechnoPursuit_leaveItAlone--c0,继续
 oTxtEmpireTechnoPursuit_technoLoss--text,后来，你发现了那艘机械教团舰船的残骸。它的一部分货舱已被彻底摧毁，你回收了残骸中仅剩的少许可用材料，继续前进。
 oTxtEmpireTechnoPursuit_technoLoss--c0,继续
-oTxtEmpNothing_intro--text,你平安抵达帝国跃迁节点，准备继续前进。
+oTxtEmpNothing_intro--text,你抵达了帝国控制的跃迁节点。这里一切如常。
 oTxtEmpNothing_intro--c0,继续
 oTxtEnemyCrewKilled--text,敌方船员已被杀。你在遗骸中搜寻并找到了一些有用的物品。
 oTxtEnemyCrewKilled--c0,继续
@@ -3035,7 +3035,7 @@ oTxtEnemyDestroyed_noReward--textPool_default32,敌舰如今只剩一堆残骸�
 oTxtEnemyDestroyed_noReward--textPool_default33,敌人已经被消灭了。
 oTxtEnemyDestroyed_noReward--textPool_default34,敌舰已化为熔渣。
 oTxtEnemyDestroyed_noReward--textPool_default35,你胜利了。
-oTxtEnemyDriveCharging--text,传感器检测到敌舰引擎的能量激增。对方正在为跃迁引擎充能。
+oTxtEnemyDriveCharging--text,敌舰引擎功率正在上升。他们正准备跃迁。
 oTxtEnemyDriveCharging--c0,继续
 oTxtEnemyFled--text,目标已跃迁离开。
 oTxtEnemyFled--c0,继续
@@ -3995,7 +3995,7 @@ oTxtGameStart9C--text,\n神王陨落。\n\n帝国陷入绝望。毁灭教团席�
 oTxtGameStart9C--c0,继续
 oTxtGameStart9C_2--text,舰船的指挥王座已被腐化，血肉组织从中滋生，缠满整个系统。别无选择的你压下不安，启动神经融合程序。知识与力量沿着血管、神经奔涌，既美妙，又亵渎。你得到了一份世间罕有的恩赐，也背上了同样罕有的诅咒。
 oTxtGameStart9C_2--c0,继续
-oTxtGenericNothing_intro--text,舰船抵达下一个跃迁点。此地探测不到生命迹象，你继续前进。
+oTxtGenericNothing_intro--text,这片星域没有任何值得留意的东西。你朝下一个跃迁节点驶去。
 oTxtGenericNothing_intro--c0,继续
 oTxtHegemonColonyThreat_contactA--text,你呼叫霸主麾下的舰船，对方轻蔑地回应：「你算什么东西，也敢挑战太阳霸主的权威？」
 oTxtHegemonColonyThreat_contactA--c0,继续
@@ -4681,7 +4681,7 @@ oTxtJewelNaniteDesert_save1C--text,机械教团船员大多已死，或奄奄一
 oTxtJewelNaniteDesert_save1C--c0,继续
 oTxtJewelNaniteDesert_save1C_1--text,经过这番冷酷的改造，你制造出了一具能正常运作的伺服尸傀。它开始协助你搜掠舰船。
 oTxtJewelNaniteDesert_save1C_1--c0,继续
-oTxtJewelNothing_intro--text,四周寂静而安宁。你得以休整片刻，随后继续前进。
+oTxtJewelNothing_intro--text,这片星域宁静而空寂，毫无活动迹象。你继续前进。
 oTxtJewelNothing_intro--c0,继续
 oTxtJewelRaiderFight_intro--c0,继续
 oTxtJewelRaiderFight_intro--textPool_default0,你一闪回到现实空间，眼前是一颗海洋辽阔的星球。工程舰、运输舰及掠夺者护卫舰正监督地表与轨道设施的建设。一艘舰船脱离队伍，武器已蓄势待发。「这里不是你该来的地方。各大氏族已将这些星球纳入领地。」
@@ -5099,7 +5099,7 @@ oTxtMechaSurvey_adjustIgnore--text,你决定忽略这些坐标。
 oTxtMechaSurvey_adjustIgnore--c0,继续
 oTxtMechaSurvey_adjustPlot--text,你将坐标输入导航控制台。
 oTxtMechaSurvey_adjustPlot--c0,继续
-oTxtMechaSurvey_hail--text,你呼叫对方，很快便收到答复。「通信已确认。此为依据759号指令开展的IV级勘测行动。你的航向穿过限制区域。请调整航向0.46弧度，以免造成污染。」
+oTxtMechaSurvey_hail--text,你呼叫对方，很快便收到答复。「通信已确认。此为依据961号指令开展的IV级勘测行动。你的航向穿过限制区域。请调整航向0.67弧度，以免造成污染。」
 oTxtMechaSurvey_hail--c0,调整航向
 oTxtMechaSurvey_hail--c1,维持当前航向
 oTxtMechaSurvey_hail--c2,索取更多信息
@@ -5130,14 +5130,14 @@ oTxtMerchantCrew--c2,攻击
 oTxtMerchantCrew--c3,离开
 oTxtMerchantCrew--textPool_default0,这里有位佣兵经纪人。「出门在外，身后总得有一群靠得住的船员。我们这里有些佣兵契约，要不要看看？」
 oTxtMerchantCrew--textPool_default1,我可以帮你联系任何你想要的人...但要付费。
-oTxtMerchantCrewGossip--text,「你听说过永恒边缘吗？传说它是一艘幽灵船，遇到它的人注定会遭受可怕的死亡。」 
+oTxtMerchantCrewGossip--text,「帝国的人竟然与邪教徒勾结－－不朽之王什么时候开始赦免这些异端了？」 
 oTxtMerchantCrewGossip--c0,交易
 oTxtMerchantCrewGossip--c1,离开
-oTxtMerchantGossip--text,「我曾亲眼看见一名机械祭司毫不留情地杀死一个克罗姆教徒。当然，她早知道自己会死。事实上，她还很欢迎这个结局。」
+oTxtMerchantGossip--text,「你也在往星系核心走吗？我见过其他像你这样的人，可他们从没回来过。」 
 oTxtMerchantGossip--c0,交易
 oTxtMerchantGossip--c1,攻击
 oTxtMerchantGossip--c2,离开
-oTxtMerchantOrdnance--text,前方尘埃云中闪烁着停泊指示灯，显出一座大型贸易前哨站的轮廓。你靠近时，一名代表联系了你，希望与你做笔生意。
+oTxtMerchantOrdnance--text,你从现实空间跃出时，一支民用贸易舰队向你致意。其中一艘舰船靠近，提出与你做笔生意。
 oTxtMerchantOrdnance--forceAddCommanderName,商贩
 oTxtMerchantOrdnance--c0,交易
 oTxtMerchantOrdnance--c1,谈话
@@ -5161,7 +5161,7 @@ oTxtMerchantSpell--c0,交易
 oTxtMerchantSpell--c1,谈话
 oTxtMerchantSpell--c2,攻击
 oTxtMerchantSpell--c3,离开
-oTxtMerchantWeapons--text,你来到一处疑似小型走私据点。对方正想出手一批货物。
+oTxtMerchantWeapons--text,你从现实空间跃出时，一支民用贸易舰队向你致意。其中一艘舰船靠近，提出与你做笔生意。
 oTxtMerchantWeapons--forceAddCommanderName,商贩
 oTxtMerchantWeapons--c0,交易
 oTxtMerchantWeapons--c1,谈话
@@ -5737,7 +5737,7 @@ oTxtPlagueRaidFort_generic--textPool_default2,你在一座破败的死亡教团�
 oTxtPlagueRaidFort_generic--textPool_default3,你在一座死亡教团疫病殖民地附近重返现实空间。在大死灵法师的监督下，成群亡灵耕作土地、开采地表资源。殖民地的对轨道防御设施寥寥无几，而且年久失修。堡垒防备空虚，里面的物资正等着人来取。
 oTxtPlayerDeath--text,你死了。
 oTxtPlayerDeath--c0,继续
-oTxtPlayerDeathHull--text,你的船已经四分五裂了。
+oTxtPlayerDeathHull--text,你的舰船已被虚空吞噬。
 oTxtPlayerDeathHull--c0,继续
 oTxtPlayerDeathTutorial--text,你死了。
 oTxtPlayerDeathTutorial--c0,主菜单
@@ -6334,7 +6334,7 @@ oTxtRaiderLootbox_intro--c1,拒绝
 oTxtRaiderLootbox_intro--c2,（掠夺者流亡徒）请对方将货箱作为礼物相赠
 oTxtRaiderLootbox_bt_raider--text,海盗拾荒者认出，你的一名船员是她的老搭档。两人叙旧，聊了会儿往日的冒险。她将货箱免费留给你们，权当送给朋友的礼物。
 oTxtRaiderLootbox_bt_raider--c0,继续
-oTxtRaiderLootbox_buy--text,拾荒者收下付款，留下密封货箱后离去。「多谢惠顾，祝你好运。」
+oTxtRaiderLootbox_buy--text,拾荒者收下货款便离开了，留下那个密封的货运箱。「尽情享用吧。里面有什么，我也不知道。」
 oTxtRaiderLootbox_buy--c0,继续
 oTxtRaiderLootbox_leave--text,你的钱还是花在有把握的东西上更好。你谢绝交易，继续前行。
 oTxtRaiderLootbox_leave--c0,继续
@@ -6859,7 +6859,7 @@ oTxtRaiderVoidWyrm_workC1--text,你同意与掠夺者联手。对方受到鼓舞
 oTxtRaiderVoidWyrm_workC1--c0,继续
 oTxtRaiderVoidWyrm_workC2--text,这场意外的同归于尽式撞击，使巨蛇暂时失去了行动能力。你赶在它苏醒前，尽可能搜刮了小天体上的物资。
 oTxtRaiderVoidWyrm_workC2--c0,继续
-oTxtRdrNothing_intro--text,一枚小信标标示着这个跃迁节点。你一路无事，继续前行。
+oTxtRdrNothing_intro--text,你探测到前方发生了亚空间跃迁。抵达后，你发现一艘失事的运输舰。先前来过的人已把残骸搜刮一空。你继续前进。
 oTxtRdrNothing_intro--c0,继续
 oTxtRebelConspiracy_intro--text,停靠贸易前哨站时，你无意间听见一段对话。「......这一击要让帝国痛到骨子里，再也不敢来烦我们。」
 oTxtRebelConspiracy_intro--c0,继续
@@ -7789,7 +7789,7 @@ oTxtTechnoShrine_searchG_2--text,你继续搜索圣坛，发现几只装满值�
 oTxtTechnoShrine_searchG_2--c0,继续
 oTxtTechnoShrine_searchG_3--text,你继续搜索圣坛，发现一间隐藏的储藏库，里面藏着一件非同寻常的遗物。
 oTxtTechnoShrine_searchG_3--c0,继续
-oTxtTechnoShrineRepeat_intro--text,你发现了一座受损的机器之神纪念碑。宏伟建筑的残破部位仍冒着火花与余烟；维修尸傀如蚂蚁般遍布其上。进入设施后，你看见一位身披长袍的机械祭司正专心指挥维修。「同僚，欧米克戎-163枢纽遭到了当地海盗的破坏，5级遗物也被盗走。这种罪行不可容忍。请求协助消灭海盗并追回遗物。」
+oTxtTechnoShrineRepeat_intro--text,你发现了一座受损的机器之神纪念碑。宏伟建筑的残破部位仍冒着火花与余烟；维修尸傀如蚂蚁般遍布其上。进入设施后，你看见一位身披长袍的机械祭司正专心指挥维修。「同僚，欧米克戎-45枢纽遭到了当地海盗的破坏，5级遗物也被盗走。这种罪行不可容忍。请求协助消灭海盗并追回遗物。」
 oTxtTechnoShrineRepeat_intro--c0,援助
 oTxtTechnoShrineRepeat_intro--c1,离开
 oTxtTechnoShrineRepeat_aid1--text,「令人满意。」你将机械祭司接上舰船。他提供了目标情报，并协助导航。
@@ -7931,7 +7931,7 @@ oTxtTechRetrievalQuest_attack2_win1--text,第二艘舰船试图逃跑，扫描�
 oTxtTechRetrievalQuest_attack2_win1--c0,继续
 oTxtTechRetrievalQuest_attack2_win2--text,你赶在第二艘掠夺者舰船逃走前将其摧毁，从残骸中取回一件带有机械教团印记的奇异装置。你把装置送到星系边缘小行星带内的一颗小型人造卫星上。卫星的电子智能确认任务完成，发放了报酬。
 oTxtTechRetrievalQuest_attack2_win2--c0,继续
-oTxtTecNothing_intro--text,一艘机械教团运输舰在此漂浮，内部空空如也，早已被搜刮殆尽。你继续前进。
+oTxtTecNothing_intro--text,你遇见一艘打捞船。它早已停摆，一切有价值的技术设备也都被拆走了。你继续前进。
 oTxtTecNothing_intro--c0,继续
 oTxtTemplate--c0,继续
 oTxtTetrarchyMagistrate_intro--text,你遇到一艘小型穿梭艇，上面载着帝国四帝政权的一名高级司法官。他显然已走投无路。「霸主手下那些该死的命运先知诬告我叛国，现在又要处死我。带我离开，我保证不会让你白忙。」
@@ -8035,7 +8035,7 @@ oTxtWarChampion_fight2--text,战斗结束后，你找到那名克罗姆勇士。
 oTxtWarChampion_fight2--c0,尝试和他说话
 oTxtWarChampion_fight2--c1,（自动手术机）重塑他的身体
 oTxtWarChampion_investigateA--text,一艘孤零零的舰船停在战场中央，向你发来通讯。「眼前这些残骸，属于克罗姆最强大的战士。他们全都死于我手。你也想挑战我吗？」
-oTxtWarChampion_investigateA--forceAddCommanderName,祖尔卡
+oTxtWarChampion_investigateA--forceAddCommanderName,马隆
 oTxtWarChampion_investigateA--c0,战斗
 oTxtWarChampion_investigateA--c1,拒绝
 oTxtWarChampion_investigateB--text,多道亚空间裂隙骤然撕开你的舰内空间。通讯中传来怒吼：「我乃克罗姆的神选！」
@@ -8156,7 +8156,7 @@ oTxtWarLaboratory_investigateD1--text,你刚靠近实验室，一艘教团战舰
 oTxtWarLaboratory_investigateD1--c0,继续
 oTxtWarLaboratory_investigateD2--text,敌方战舰释放出道道黑暗能量，你随即遭到攻击。
 oTxtWarLaboratory_investigateD2--c0,继续
-oTxtWarNothing_intro--text,远处一颗行星无声地燃烧，地表已被彻底烧成玻璃。你驶过时，没有发现任何值得关注的东西。
+oTxtWarNothing_intro--text,这里散布着一片残骸。焦黑的碎片早已被轰得支离破碎，找不到任何值得回收的东西。你继续前进。
 oTxtWarNothing_intro--c0,继续
 oTxtWarpStormSubsides--text,亚空间漩涡消退。
 oTxtWarpStormSubsides--c0,继续

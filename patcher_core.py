@@ -16,6 +16,8 @@ import uuid
 from payload_format import ORIGINAL_FILES, PAYLOAD_FILES, EXTRA_FILES, apply_delta, sha, byte_sha
 
 BACKUP = '_VoidWar_Chinese_Original'
+BETA_BACKUP = '_VoidWar_Chinese_Original_1_5_3_beta'
+BACKUP_BY_VERSION = {'1.5.2b': BACKUP, '1.5.3 beta': BETA_BACKUP}
 TXN = '.VoidWarChinese.transaction'
 BACKUP_PREP = '.VoidWarChinese.backup-preparing'
 BUILD = '.VoidWarChinese.build'
@@ -66,7 +68,7 @@ def is_link(path):
     except FileNotFoundError: return False
 
 def safe_child(root, relative):
-    require(relative in set(ORIGINAL_FILES + EXTRA_FILES) | {BACKUP, TXN, BACKUP_PREP, BUILD, '.VoidWarChinese.lock'},
+    require(relative in set(ORIGINAL_FILES + EXTRA_FILES) | set(BACKUP_BY_VERSION.values()) | {TXN, BACKUP_PREP, BUILD, '.VoidWarChinese.lock'},
             'UNSAFE_PATH', '发现不安全的文件位置，已停止。')
     p = root / relative
     for part in [p, *list(p.parents)[:len(p.parts) - len(root.parts) - 1]]:
@@ -166,7 +168,7 @@ class Installer:
     def __init__(self, payload, game, profile, *, progress=None, running=game_running, fault=None):
         self.payload = Path(payload).resolve(); self.game = Path(game).resolve(); self.profile = Path(profile).absolute()
         self.progress = progress or (lambda text: None); self.running = running; self.fault = fault or (lambda phase, index: None)
-        self.backup = self.game / BACKUP; self.txn = self.game / TXN
+        self.backup_name = BACKUP; self.backup = self.game / self.backup_name; self.txn = self.game / TXN
         self.manifest = None
 
     def guard(self):
@@ -178,7 +180,7 @@ class Installer:
             require(not is_link(self.profile) and not is_link(self.profile.parent), 'LINK_PROFILE', '设置存档不能是链接文件。')
             return self.profile
         if name == '@state':
-            safe_child(self.game, BACKUP)
+            safe_child(self.game, self.backup_name)
             require(not is_link(self.backup / 'installation.json'), 'LINK_PATH', '备份记录不能是链接。')
             return self.backup / 'installation.json'
         return safe_child(self.game, name)
@@ -186,17 +188,21 @@ class Installer:
     def load_payload(self):
         m = read_json(self.payload / 'payload.json')
         require(m.get('schema') == 1, 'PAYLOAD_VERSION', '补丁载荷版本不受支持。')
+        require(m.get('game_version') in BACKUP_BY_VERSION, 'GAME_VERSION', '安装包标注的游戏版本不受支持。')
         require([x.get('path') for x in m.get('original_files', [])] == list(ORIGINAL_FILES)
                 and [x.get('path') for x in m.get('files', [])] == list(PAYLOAD_FILES), 'PAYLOAD_LIST', '补丁文件清单无效。')
         for x in m['files']:
             require(file_hash(self.payload / x['path']) == x['sha256'], 'PAYLOAD_HASH', '补丁载荷校验失败，请重新下载。')
         require(file_hash(self.payload / 'engine.delta.gz') == m['delta_sha256'], 'DELTA_HASH', '引擎差分校验失败，请重新下载。')
         require(m['original_files'][0]['sha256'] == m['delta']['source_sha256'], 'PAYLOAD_HASH', '原版校验信息不一致。')
+        self.backup_name = BACKUP_BY_VERSION[m['game_version']]
+        self.backup = safe_child(self.game, self.backup_name)
         self.manifest = m
         return m
 
     def recover(self):
         if not self.txn.exists(): return False
+        if self.manifest is None: self.load_payload()
         safe_child(self.game, TXN)
         require(all(not is_link(p) for p in self.txn.rglob('*')), 'LINK_PATH', '事务中含链接，已保留现场。')
         marker = self.txn / 'journal.json'
@@ -205,6 +211,9 @@ class Installer:
             remove_owned_tree(self.game, TXN); return True
         journal = read_json(marker)
         require(journal.get('format') == 'VWZH_TXN_1' and journal.get('phase') in {'prepared', 'committing', 'committed'}, 'INVALID_TRANSACTION', '事务恢复记录无效。')
+        require(journal.get('backup_name', BACKUP) == self.backup_name
+                and journal.get('source_sha256', self.manifest['delta']['source_sha256']) == self.manifest['delta']['source_sha256'],
+                'VERSION_BINDING', '该中断操作属于另一个游戏版本。请先用当时的安装包恢复中断操作，再安装本版本。')
         require(journal.get('profile_binding') == byte_sha(str(self.profile.resolve()).casefold().encode('utf8')),
                 'PROFILE_BINDING', '该中断事务属于另一设置存档位置，请使用原来的账户和设置存档。')
         entries = journal.get('entries', [])
@@ -232,6 +241,9 @@ class Installer:
         m = self.manifest
         require(all(not is_link(p) for p in self.backup.rglob('*')), 'LINK_PATH', '原版备份含链接，已停止。')
         state = read_json(self.backup / 'installation.json')
+        require(state.get('source_sha256', m['delta']['source_sha256']) == m['delta']['source_sha256']
+                and state.get('game_version', m['game_version']) == m['game_version'],
+                'BACKUP_VERSION', '原版备份属于另一个游戏版本；已保留备份并停止。')
         language = state.get('original_language')
         require(isinstance(language, (int, float)) and not isinstance(language, bool) and math.isfinite(language)
                 and language >= 0 and int(language) == language and isinstance(state.get('font_was_present'), bool), 'BACKUP_STATE', '原版备份记录缺少有效信息。')
@@ -256,7 +268,8 @@ class Installer:
         require(set(extras) == set(EXTRA_FILES), 'BACKUP_STATE', '原附加文件清单不完整。')
         for name, expected in extras.items():
             if expected: require(file_hash(self.backup / name) == expected, 'BACKUP_EXTRA', '原附加文件备份损坏。')
-        return {'schema': 2, 'original_language': language, 'font_was_present': state['font_was_present'],
+        return {'schema': 3, 'game_version': m['game_version'], 'source_sha256': m['delta']['source_sha256'],
+                'original_language': language, 'font_was_present': state['font_was_present'],
                 'original_font_sha256': state.get('original_font_sha256'), 'extra_originals': extras,
                 'installed_files': state.get('installed_files', {}), 'last_action': state.get('last_action', 'legacy')}
 
@@ -276,7 +289,8 @@ class Installer:
             source = self.target(name); extra[name] = file_hash(source)
             if extra[name]: atomic_copy(source, staging / name)
         atomic_bytes(staging / 'profile.before-install.sav', raw_profile)
-        state = {'schema': 2, 'original_language': language, 'font_was_present': extra[EXTRA_FILES[0]] is not None,
+        state = {'schema': 3, 'game_version': self.manifest['game_version'], 'source_sha256': self.manifest['delta']['source_sha256'],
+                 'original_language': language, 'font_was_present': extra[EXTRA_FILES[0]] is not None,
                  'original_font_sha256': extra[EXTRA_FILES[0]], 'extra_originals': extra, 'installed_files': {}, 'last_action': 'backup'}
         atomic_json(staging / 'installation.json', state)
         if self.backup.exists():
@@ -287,14 +301,17 @@ class Installer:
 
     def preflight(self, action):
         self.guard()
+        m = self.load_payload()
         require((self.game / 'Void War.exe').is_file(), 'GAME_NOT_FOUND', '所选目录没有 Void War.exe。请选择 Steam 中的 Void War 游戏目录。')
-        for name in [*ORIGINAL_FILES, *EXTRA_FILES, BACKUP, TXN]: self.target(name) if name in ALLOWED_TARGETS else safe_child(self.game, name)
+        for name in [*ORIGINAL_FILES, *EXTRA_FILES, self.backup_name, TXN]: self.target(name) if name in ALLOWED_TARGETS else safe_child(self.game, name)
         require(self.profile.is_file(), 'PROFILE_MISSING', '未找到游戏设置存档。请先启动并退出游戏一次。')
         raw = self.profile.read_bytes(); _, language = profile_change(raw, 3)
-        m = self.load_payload(); current = file_hash(self.target('data.win'))
+        current = file_hash(self.target('data.win'))
         observed = {'data.win': current, '@profile': byte_sha(raw)}
         valid_engines = {m['delta']['source_sha256'], m['delta']['target_sha256'], *m.get('compatible_previous', {}).get('engine_sha256', [])}
-        require(current in valid_engines, 'WRONG_VERSION', '游戏版本或 data.win 不匹配。仅支持 Void War 1.5.2b；请勿覆盖更新版或其他修改版。')
+        require(current in valid_engines, 'WRONG_VERSION',
+                '游戏版本或 data.win 不匹配。本安装包仅支持 Void War ' + m['game_version']
+                + '（Steam build ' + str(m.get('steam_build_id', '未标注')) + '）；请先切换到对应版本并验证游戏文件。')
         if (self.backup / 'installation.json').exists(): state = self.check_original_backup()
         else:
             require(action == 'install' and current == m['delta']['source_sha256'], 'BACKUP_MISSING', '缺少完整原版备份。请先用 Steam 验证并还原原版游戏。')
@@ -334,6 +351,7 @@ class Installer:
                 after = file_hash(self.txn / 'new' / str(i))
             entries.append({'target': name, 'before': before, 'after': after})
         journal = {'format': 'VWZH_TXN_1', 'phase': 'prepared', 'entries': entries,
+                   'backup_name': self.backup_name, 'source_sha256': self.manifest['delta']['source_sha256'],
                    'profile_binding': byte_sha(str(self.profile.resolve()).casefold().encode('utf8'))}
         atomic_json(self.txn / 'journal.json', journal)
         self.fault('prepared', -1)

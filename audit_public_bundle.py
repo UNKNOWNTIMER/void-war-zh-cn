@@ -36,11 +36,12 @@ def audit(exe, original, forbidden):
     # Inspect decoded member contents and recursively inspect PYZ code constants.
     # This catches developer paths hidden inside compressed executable archives.
     private=[value.encode('utf8') for value in forbidden]+[value.encode('utf-16le') for value in forbidden]
-    checked=0
+    checked=0;member_hashes=set()
     def inspect_bytes(blob,label):
         nonlocal checked
         checked+=1
-        assert not any(token.lower() in blob.lower() for token in private),('Private marker in public artifact',label)
+        lowered=blob.lower()
+        assert not any(token.lower() in lowered for token in private),('Private marker in public artifact',label)
     def inspect_code(code):
         inspect_bytes(code.co_filename.encode('utf8'),'code filename')
         for c in code.co_consts:
@@ -56,10 +57,11 @@ def audit(exe, original, forbidden):
                 elif isinstance(value,bytes):inspect_bytes(value,name)
         else:
             blob=archive.extract(key)
-            if isinstance(blob,bytes):inspect_bytes(blob,normalized)
+            if isinstance(blob,bytes):
+                inspect_bytes(blob,normalized)
+                member_hashes.add(hashlib.sha256(blob).hexdigest())
     original_hashes={sha(original/p) for p in ORIGINAL_FILES}
-    assert not any(hashlib.sha256(archive.extract(key)).hexdigest() in original_hashes
-                   for key in archive.toc if isinstance(archive.extract(key),bytes))
+    assert not member_hashes & original_hashes
     return {'status':'PASS','exe_sha256':sha(exe),'exe_bytes':exe.stat().st_size,
             'public_payload_files':sorted(expected),'public_art_assets':sorted(assets),'engine_replacement_segments':header['segments'],
             'replacement_bytes_only':replacement,'unchanged_original_context_bytes_in_delta':0,

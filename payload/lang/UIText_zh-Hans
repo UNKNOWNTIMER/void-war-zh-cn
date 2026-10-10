@@ -1174,8 +1174,8 @@ oSysMedBay--upgradeTierDescription6,
 oSysMedBay--upgradeTierDescription7,
 oSysMedBay--upgradeTierDescription8,
 oSysMedBay--upgradeTierDescription9,
-oHullPlayerShip11B--hullName,舰船 11B
-oHullPlayerShip11B--shipMenu_primerText,妄自尊大。
+oHullPlayerShip11B--hullName,妄自尊大
+oHullPlayerShip11B--shipMenu_primerText,太空防卫军工程技术与阿里奥克巫术的诡异融合。这艘舰船的尸骸被一场猛烈的裂隙风暴抛出，随后被回收、复苏，并改装为战争机器。舰上的太空防卫军军官已从冷冻休眠中苏醒，虽然失去了记忆，却仍尽职地侍奉着阿里奥克的新主人。
 oEFDamageHullOnDeath--description,死亡时损伤船体
 oAblTeleportSelfTarget_cyberfused--name,不稳定传送器
 oAblTeleportSelfTarget_cyberfused--description,将自己传送到目标房间。 25%几率对目标房间内的敌人造成15生命值伤害。
@@ -2983,7 +2983,9 @@ oSysMinibossArtilleryBlessed4--upgradeTierDescription6,
 oSysMinibossArtilleryBlessed4--upgradeTierDescription7,
 oSysMinibossArtilleryBlessed4--upgradeTierDescription8,
 oSysMinibossArtilleryBlessed4--upgradeTierDescription9,
-oGameStartMessage--announcementTitles_v1_5_2b,修补程序 v1.5.2b
+oGameStartMessage--announcementTitles_v1_5_3,测试版 v1.5.3
+oGameStartMessage--announcementBodies_v1_5_3,2026年10月6日\n\n新增内容\n-新舰船：星箔 B\n\n游戏机制\n-修复拉撒路急救包使用后未清除负面状态的问题\n-修复死亡教团入侵的后续事件未生成敌舰的问题\n\n界面\n-暂时修复尚未加入游戏的舰船被显示并提示已解锁的问题\n\n文本\n-修复监工 C 舰名中的拼写错误
+oGameStartMessage--announcementTitles_v1_5_2b,正式版 v1.5.2b
 oGameStartMessage--announcementBodies_v1_5_2b,2026年九月30日\n\n游戏机制\n-修复恶魔王座向完全被友军单位占据的舰船开火时导致崩溃的问题\n-恶魔船员现在会正确阻止获得「本质奇点」「你一定会征服」和「枪口下的利润」成就\n\n界面\n-在两次跃迁之间消失的敌舰船员，不再导致跃迁时弹出警告窗口\n\n文本\n-更新「单位死亡时生成血肉幼体」效果的说明\n-更新亵渎器官的背景介绍\n-更新18个阵营专属模块的说明
 oGameStartMessage--announcementTitles_v1_5_2a,发布 v1.5.2a - 湮灭
 oGameStartMessage--announcementBodies_v1_5_2a,2026年九月28日\n\n新增内容\n-新舰船：湮灭 C\n-新子系统：恶魔王座\n-新船员：食尸鬼大法师\n-新船员：饕餮者\n-新船员装备：特拉佐尔共生体\n-新模块：胆汁增生体\n-新增6个神殿事件\n-新增恶魔教化\n\n游戏机制\n-重新设计教化机制\n-暂时修复单位被精神控制后偶尔失去阵营专属模块效果的问题\n-暂时修复追踪导弹偶尔在购买时被激活的问题\n\n画面\n-新增憎恶巨怪的头像\n\n文本\n-修复拉撒路急救包能力说明中的错字\n-统一多项能力说明的措辞\n-修复其他错字

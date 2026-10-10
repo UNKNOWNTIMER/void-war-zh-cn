@@ -11,7 +11,7 @@ import unittest
 SOURCE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SOURCE))
 from payload_format import ORIGINAL_FILES, EXTRA_FILES, PAYLOAD_FILES, build_delta, sha
-from patcher_core import Installer, PatchError, BACKUP, TXN, game_lock, profile_change
+from patcher_core import Installer, PatchError, BACKUP, BETA_BACKUP, TXN, game_lock, profile_change
 
 class Fixture:
     def __init__(self, root):
@@ -78,6 +78,61 @@ class SafetyTests(unittest.TestCase):
         f.make_payload(2); f.installer().run('install')
         self.assertEqual(sha(f.game/'data.win'),f.m['delta']['target_sha256'])
         f.installer().run('restore'); self.assertEqual(sha(f.game/'data.win'),sha(f.original/'data.win'))
+
+    def beta_payload(self):
+        f = self.f
+        m = json.loads((f.payload/'payload.json').read_text('utf8'))
+        m.update(game_version='1.5.3 beta', steam_build_id='25749411')
+        (f.payload/'payload.json').write_text(json.dumps(m), encoding='utf8')
+        return m
+
+    def test_beta_backup_does_not_consume_or_replace_stable_backup(self):
+        f=self.f; f.installer().run('install'); f.installer().run('restore')
+        old={p.relative_to(f.game/BACKUP).as_posix():sha(p) for p in (f.game/BACKUP).rglob('*') if p.is_file()}
+        m=self.beta_payload(); f.installer().run('install')
+        self.assertTrue((f.game/BETA_BACKUP/'installation.json').is_file())
+        self.assertEqual(sha(f.game/'data.win'),m['delta']['target_sha256'])
+        f.installer().run('restore')
+        self.assertEqual(sha(f.game/'data.win'),m['delta']['source_sha256'])
+        self.assertEqual(old,{p.relative_to(f.game/BACKUP).as_posix():sha(p) for p in (f.game/BACKUP).rglob('*') if p.is_file()})
+
+    def test_beta_refuses_to_recover_stable_transaction(self):
+        f=self.f
+        def interrupt(phase,index):
+            if phase=='after_replace' and index==0: raise KeyboardInterrupt()
+        with self.assertRaises(KeyboardInterrupt):f.installer(fault=interrupt).run('install')
+        before=f.snapshot(); journal=(f.game/TXN/'journal.json').read_bytes()
+        self.beta_payload()
+        with self.assertRaises(PatchError) as err:f.installer().run('install')
+        self.assertEqual(err.exception.code,'VERSION_BINDING')
+        self.assertEqual(before,f.snapshot());self.assertEqual(journal,(f.game/TXN/'journal.json').read_bytes())
+
+    def test_beta_interrupted_install_recovers_into_beta_backup(self):
+        f=self.f;self.beta_payload()
+        def interrupt(phase,index):
+            if phase=='after_replace' and index==3:raise KeyboardInterrupt()
+        with self.assertRaises(KeyboardInterrupt):f.installer(fault=interrupt).run('install')
+        f.installer().run('install');f.installer().run('restore')
+        self.assertEqual(sha(f.game/'data.win'),sha(f.original/'data.win'))
+        self.assertFalse((f.game/BACKUP).exists())
+        state=json.loads((f.game/BETA_BACKUP/'installation.json').read_text('utf8'))
+        self.assertEqual(state['game_version'],'1.5.3 beta')
+
+    def test_beta_damaged_backup_cannot_fall_back_to_stable(self):
+        f=self.f;f.installer().run('install');f.installer().run('restore')
+        self.beta_payload();f.installer().run('install')
+        (f.game/BETA_BACKUP/'data.win').write_bytes(b'damaged beta backup')
+        before=f.snapshot()
+        with self.assertRaises(PatchError) as err:f.installer().run('restore')
+        self.assertEqual(err.exception.code,'BACKUP_HASH');self.assertEqual(before,f.snapshot())
+
+    def test_beta_wrong_version_message_names_beta(self):
+        f=self.f;self.beta_payload();(f.game/'data.win').write_bytes(b'unsupported game update')
+        before=f.snapshot()
+        with self.assertRaises(PatchError) as err:f.installer().run('install')
+        self.assertEqual(err.exception.code,'WRONG_VERSION')
+        self.assertIn('1.5.3 beta',str(err.exception));self.assertIn('25749411',str(err.exception))
+        self.assertEqual(before,f.snapshot());self.assertFalse((f.game/BETA_BACKUP).exists())
 
     def test_existing_font_and_license_restored(self):
         f=self.f

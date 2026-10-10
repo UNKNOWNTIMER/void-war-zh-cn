@@ -1,3 +1,4 @@
 * text=auto eol=lf
-payload/** -text
+# Hashed payload resources retain their validated spacing and line endings.
+payload/** -text -whitespace
 compatibility/*.json text eol=lf

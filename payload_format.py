@@ -9,6 +9,11 @@ import struct
 
 MAGIC = b'VWZHDF1\n'
 ORIGINAL_SHA = '1d8bb23910251b7bc50f1013efbec18ce0cf030894e7d2de50c4bdadfb9f8db9'
+SUPPORTED_ORIGINALS = {
+    ORIGINAL_SHA: {'game_version': '1.5.2b', 'steam_build_id': '25669267'},
+    '336d857f6ca0b7a4d847c15094668ca8488ec5949eb0abf0439da1b331e5ec2f':
+        {'game_version': '1.5.3 beta', 'steam_build_id': '25749411'},
+}
 ORIGINAL_FILES = ('data.win', 'lang/functionText_zh-Hans', 'lang/UIText_zh-Hans', 'lang/encounterText_zh-Hans')
 EXTRA_FILES = ('NotoSerifSC-Black.otf', 'licenses/NotoSerif-OFL.txt')
 PAYLOAD_FILES = ORIGINAL_FILES[1:] + EXTRA_FILES

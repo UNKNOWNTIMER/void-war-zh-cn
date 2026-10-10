@@ -6,3 +6,4 @@ tests/__pycache__/
 *.pyc
 *.spec
 local-tests/
+private/

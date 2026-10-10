@@ -222,7 +222,7 @@ class App:
         cx, cy = w-124, 104
         c.create_oval(cx-68, cy-68, cx+68, cy+68, outline='#302f26', tags='frame')
         c.create_image(cx, cy, image=self.logo, tags='frame')
-        version = str(self.manifest.get('game_version', '1.5.2b'))
+        version = str(self.manifest.get('game_version', '未标注'))
         build = str(self.manifest.get('steam_build_id', '25669267'))
         c.create_text(39, h-34, text='Steam ' + version + '  ·  build ' + build,
                       font=self.small_font, fill='#87887d', anchor='w', tags='frame')

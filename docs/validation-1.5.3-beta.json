@@ -1,0 +1,589 @@
+{
+  "schema": "void-war-zh-cn-beta-validation-v1",
+  "status": "PASS",
+  "patch_version": "2026.10.10.4",
+  "game_version": "1.5.3 beta",
+  "steam_build": 25749411,
+  "verified_at": "2026-10-10T23:48:45.580434+08:00",
+  "exe_sha256": "6cf1e801d7e7fe0bf56ac5295939094b092bd3bd87a546ccc3c06f49d3222b19",
+  "exe_bytes": 32740986,
+  "original_engine_sha256": "336d857f6ca0b7a4d847c15094668ca8488ec5949eb0abf0439da1b331e5ec2f",
+  "translated_engine_sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+  "independent_engine_reproduction": "PASS",
+  "text": {
+    "tables": {
+      "functionText": {
+        "keys": 726,
+        "sha256": "4b6244ac2b8bf36e36d5e3b6edda29279ecae87e479460cb40b6816d264f89cf"
+      },
+      "UIText": {
+        "keys": 3800,
+        "sha256": "1068c44fa8bce45c9bfc482a39b7ce625f96bf24c5e99339520f7594c827aa64"
+      },
+      "encounterText": {
+        "keys": 8348,
+        "sha256": "4fcad2cad132ab0db97d4c460e18a045a83cedbd4132f0359e3ca893be64583e"
+      }
+    },
+    "total_keys": 12874,
+    "source_empty_preserved": 592,
+    "runtime_markers_preserved": 98,
+    "latin_rows_reviewed": 99,
+    "unexpected_latin_tokens": 0
+  },
+  "beta_delta": {
+    "reviewed_keys": 27,
+    "ui_keys": 6,
+    "story_keys": 21,
+    "reviewed_records": [
+      {
+        "table": "UIText",
+        "key": "oHullPlayerShip07C--hullName",
+        "reviewed": true
+      },
+      {
+        "table": "UIText",
+        "key": "oHullPlayerShip11B--hullName",
+        "reviewed": true
+      },
+      {
+        "table": "UIText",
+        "key": "oHullPlayerShip11B--shipMenu_primerText",
+        "reviewed": true
+      },
+      {
+        "table": "UIText",
+        "key": "oGameStartMessage--announcementTitles_v1_5_3",
+        "reviewed": true
+      },
+      {
+        "table": "UIText",
+        "key": "oGameStartMessage--announcementBodies_v1_5_3",
+        "reviewed": true
+      },
+      {
+        "table": "UIText",
+        "key": "oGameStartMessage--announcementTitles_v1_5_2b",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtBldNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtColonyDrop_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtCoreNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtDemNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtEmpireCultLifepods_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtEmpNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtEnemyDriveCharging--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtGenericNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtJewelNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtMechaSurvey_hail--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtMerchantCrewGossip--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtMerchantGossip--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtMerchantOrdnance--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtMerchantWeapons--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtPlayerDeathHull--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtRaiderLootbox_buy--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtRdrNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtTechnoShrineRepeat_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtTecNothing_intro--text",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtWarChampion_investigateA--forceAddCommanderName",
+        "reviewed": true
+      },
+      {
+        "table": "encounterText",
+        "key": "oTxtWarNothing_intro--text",
+        "reviewed": true
+      }
+    ]
+  },
+  "independent_gossip": {
+    "status": "PASS",
+    "input_sha256": "8c3e88e79881fb9430717c7262308b35fd3842f9b0e1e7123b559beb8a97bf4d",
+    "output_sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+    "reviewed_dialogues": 156,
+    "pools": {
+      "generic": 33,
+      "TECHNO": 51,
+      "BLOOD": 44,
+      "WAR": 28
+    },
+    "gameplay_pool_order_and_weights_preserved": true,
+    "reference_chains_preserved": true,
+    "resource_offsets_preserved": true,
+    "fallback": "Resolve the existing random line and its dynamic tags when a localization table lacks that entry",
+    "english_prose_remaining_in_active_pools": 0
+  },
+  "font": {
+    "status": "PASS",
+    "required_characters": 2897,
+    "otf_missing": 0,
+    "embedded": [
+      {
+        "font_id": 40,
+        "missing": 0,
+        "empty_required_rectangles": 0
+      },
+      {
+        "font_id": 43,
+        "missing": 0,
+        "empty_required_rectangles": 0
+      }
+    ]
+  },
+  "installer_tests": {
+    "status": "PASS",
+    "verified_at": "2026-10-10T23:47:14+08:00",
+    "scope": "Synthetic temporary game directories and synthetic saves only; source-level tests, not frozen EXE or real-game acceptance.",
+    "tests_run": 20,
+    "tests_passed": 20,
+    "fault_subcases": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed_tests": [
+      "test_installer.SafetyTests.test_beta_backup_does_not_consume_or_replace_stable_backup",
+      "test_installer.SafetyTests.test_beta_damaged_backup_cannot_fall_back_to_stable",
+      "test_installer.SafetyTests.test_beta_interrupted_install_recovers_into_beta_backup",
+      "test_installer.SafetyTests.test_beta_refuses_to_recover_stable_transaction",
+      "test_installer.SafetyTests.test_beta_wrong_version_message_names_beta",
+      "test_installer.SafetyTests.test_corrupt_payload_and_delta_rejected",
+      "test_installer.SafetyTests.test_duplicate_and_invalid_profile_rejected",
+      "test_installer.SafetyTests.test_existing_font_and_license_restored",
+      "test_installer.SafetyTests.test_external_profile_change_is_never_overwritten_on_recovery",
+      "test_installer.SafetyTests.test_failure_at_each_install_replace_rolls_back",
+      "test_installer.SafetyTests.test_hard_process_exit_recovers_on_next_run",
+      "test_installer.SafetyTests.test_install_restore_preserves_new_progress",
+      "test_installer.SafetyTests.test_legacy_powershell_backup",
+      "test_installer.SafetyTests.test_missing_and_damaged_backup_preflight",
+      "test_installer.SafetyTests.test_profile_change_between_prepare_and_commit_is_preserved",
+      "test_installer.SafetyTests.test_recovery_cannot_bind_to_another_profile_with_identical_content",
+      "test_installer.SafetyTests.test_reinstall_and_upgrade",
+      "test_installer.SafetyTests.test_restore_failure_rolls_back_to_chinese",
+      "test_installer.SafetyTests.test_running_guard",
+      "test_installer.SafetyTests.test_wrong_version_and_missing_resource_rejected"
+    ],
+    "python_version": "3.12.14",
+    "source_sha256": {
+      "patcher_core.py": "1769d04336ab4529ca4f934a0f964c5b37986af8ed16514b1143509ff6f5f910",
+      "payload_format.py": "68cc59482c018d2e1cfef30e6afb12ecbde9a0630661a7aea0a2875acbded732",
+      "installer_gui.py": "d6638d83c33cfc8dfc6ffd04e6c6404697ff1bb17ebd84ce4a6049865102d494",
+      "tests/test_installer.py": "ca4cd033396392763ef0d82fb4548258f1e96bed312651c01228a81899006cee"
+    },
+    "coverage": [
+      "install/restore preserves subsequent progress",
+      "reinstall and supported upgrade",
+      "preexisting font/license restore",
+      "wrong version and missing resource preflight",
+      "corrupt delta and text payload",
+      "duplicate and invalid language field",
+      "game running guard",
+      "missing and damaged backup",
+      "17 per-write and commit failure rollback cases",
+      "restore failure rollback",
+      "hard child-process exit and next-run recovery",
+      "external profile change blocks recovery",
+      "different account profile cannot claim transaction even with identical bytes",
+      "profile change between preparation and commit",
+      "legacy PowerShell backup adoption",
+      "Chinese, spaces, brackets, ampersand and apostrophe paths",
+      "native nested savedSettings.currLanguage and preserved terminal NUL"
+    ],
+    "real_installed_game_modified": false,
+    "real_save_files_accessed": false,
+    "limitations": [
+      "Final frozen EXE payload and GUI installation require separate acceptance.",
+      "No clean Windows VM or code-signing validation."
+    ]
+  },
+  "compiled_layout_vm": {
+    "status": "PASS",
+    "cases": 28,
+    "actual_bytecode_executed": true,
+    "width_model": "Size-scaled embedded advances; real OTF rasterization is tested in-game.",
+    "cache_hit_avoids_character_measurement": true,
+    "newline_preservation": true,
+    "cache_lifetime_and_resolution_keys": true,
+    "stack_balance_all_returns": true,
+    "limitation": "A VM model is not the GameMaker runner; separate real-game testing remains required."
+  },
+  "real_payload_synthetic_validation": {
+    "status": "PASS",
+    "engine_source_sha256": "336d857f6ca0b7a4d847c15094668ca8488ec5949eb0abf0439da1b331e5ec2f",
+    "engine_target_sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+    "installed_resource_hashes_verified": 6,
+    "restored_original_hashes_verified": 4,
+    "current_progress_preserved": true,
+    "synthetic_autosave_and_score_untouched": true,
+    "source_originals_unchanged": true,
+    "real_game_executable_or_real_saves_accessed": false,
+    "special_unicode_space_punctuation_path": true,
+    "installed_result": {
+      "status": "PASS",
+      "action": "install",
+      "engine_sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+      "language": 3
+    },
+    "restored_result": {
+      "status": "PASS",
+      "action": "restore",
+      "engine_sha256": "336d857f6ca0b7a4d847c15094668ca8488ec5949eb0abf0439da1b331e5ec2f",
+      "language": 0
+    }
+  },
+  "frozen_self_check": {
+    "status": "PASS",
+    "frozen": true,
+    "tk_version": "8.6.12",
+    "engine_target_sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+    "payload_files_verified": 6,
+    "game_or_save_files_accessed": false
+  },
+  "public_bundle_audit": {
+    "status": "PASS",
+    "exe_sha256": "6cf1e801d7e7fe0bf56ac5295939094b092bd3bd87a546ccc3c06f49d3222b19",
+    "exe_bytes": 32740986,
+    "public_payload_files": [
+      "payload/NotoSerifSC-Black.otf",
+      "payload/engine.delta.gz",
+      "payload/lang/UIText_zh-Hans",
+      "payload/lang/encounterText_zh-Hans",
+      "payload/lang/functionText_zh-Hans",
+      "payload/licenses/NotoSerif-OFL.txt",
+      "payload/payload.json"
+    ],
+    "public_art_assets": [
+      "assets/installer.ico",
+      "assets/installer_logo.png",
+      "assets/logo-source.png"
+    ],
+    "engine_replacement_segments": 7786,
+    "replacement_bytes_only": 65303,
+    "unchanged_original_context_bytes_in_delta": 0,
+    "full_original_engine_or_original_csv_members": 0,
+    "save_file_members": 0,
+    "private_marker_matches": 0,
+    "decoded_blobs_or_code_constants_checked": 21160,
+    "scope": "Whitelist, exact difference bytes, original-resource hashes and supplied private markers; not a general proof against every possible identifying string."
+  },
+  "real_gui_roundtrip": [
+    {
+      "status": "PASS",
+      "mode": "install",
+      "time": "2026-10-10T23:42:44.173287+08:00",
+      "files": [
+        {
+          "path": "data.win",
+          "sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+          "match": true
+        },
+        {
+          "path": "lang/functionText_zh-Hans",
+          "sha256": "4b6244ac2b8bf36e36d5e3b6edda29279ecae87e479460cb40b6816d264f89cf",
+          "match": true
+        },
+        {
+          "path": "lang/UIText_zh-Hans",
+          "sha256": "1068c44fa8bce45c9bfc482a39b7ce625f96bf24c5e99339520f7594c827aa64",
+          "match": true
+        },
+        {
+          "path": "lang/encounterText_zh-Hans",
+          "sha256": "4fcad2cad132ab0db97d4c460e18a045a83cedbd4132f0359e3ca893be64583e",
+          "match": true
+        },
+        {
+          "path": "NotoSerifSC-Black.otf",
+          "sha256": "2c2af226af6170ac28730be03b16ee7ffa6144fe54471d9ebe8a03de97b58160",
+          "match": true
+        },
+        {
+          "path": "licenses/NotoSerif-OFL.txt",
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "match": true
+        }
+      ],
+      "profile_progress_preserved": true,
+      "language": 3.0,
+      "expected_language": 3,
+      "autosave_preserved": true,
+      "score_preserved": true
+    },
+    {
+      "status": "PASS",
+      "mode": "restore",
+      "time": "2026-10-10T23:43:01.460787+08:00",
+      "files": [
+        {
+          "path": "data.win",
+          "sha256": "336d857f6ca0b7a4d847c15094668ca8488ec5949eb0abf0439da1b331e5ec2f",
+          "match": true
+        },
+        {
+          "path": "lang/functionText_zh-Hans",
+          "sha256": "f6ea08a761dc9d86acd25db32f2a80c9a8535937c562e16795b3956e0e99c9ab",
+          "match": true
+        },
+        {
+          "path": "lang/UIText_zh-Hans",
+          "sha256": "520b518a5f724c39e43987df8bf1c014d8dc8bafd69ae63ab529904a00c1f87b",
+          "match": true
+        },
+        {
+          "path": "lang/encounterText_zh-Hans",
+          "sha256": "fcd4b4d2946b1e6a3327d3af674fc4f8f3b13ac9146993f563bc7eb369b5b3e3",
+          "match": true
+        }
+      ],
+      "profile_progress_preserved": true,
+      "language": 3.0,
+      "expected_language": 3,
+      "autosave_preserved": true,
+      "score_preserved": true
+    },
+    {
+      "status": "PASS",
+      "mode": "reinstall",
+      "time": "2026-10-10T23:43:21.081714+08:00",
+      "files": [
+        {
+          "path": "data.win",
+          "sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+          "match": true
+        },
+        {
+          "path": "lang/functionText_zh-Hans",
+          "sha256": "4b6244ac2b8bf36e36d5e3b6edda29279ecae87e479460cb40b6816d264f89cf",
+          "match": true
+        },
+        {
+          "path": "lang/UIText_zh-Hans",
+          "sha256": "1068c44fa8bce45c9bfc482a39b7ce625f96bf24c5e99339520f7594c827aa64",
+          "match": true
+        },
+        {
+          "path": "lang/encounterText_zh-Hans",
+          "sha256": "4fcad2cad132ab0db97d4c460e18a045a83cedbd4132f0359e3ca893be64583e",
+          "match": true
+        },
+        {
+          "path": "NotoSerifSC-Black.otf",
+          "sha256": "2c2af226af6170ac28730be03b16ee7ffa6144fe54471d9ebe8a03de97b58160",
+          "match": true
+        },
+        {
+          "path": "licenses/NotoSerif-OFL.txt",
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "match": true
+        }
+      ],
+      "profile_progress_preserved": true,
+      "language": 3.0,
+      "expected_language": 3,
+      "autosave_preserved": true,
+      "score_preserved": true
+    }
+  ],
+  "native": {
+    "status": "PASS",
+    "scope": "Observed native Windows game and frozen installer UI; representative scenes, not a full playthrough.",
+    "final_engine_sha256": "38910d97eecd7f31cf3250c22e62c687be5997088c7abcc95a3ec9c9fadd7414",
+    "layout_stage_engine_sha256": "8c3e88e79881fb9430717c7262308b35fd3842f9b0e1e7123b559beb8a97bf4d",
+    "final_normal_game": [
+      "main_menu_author_and_version",
+      "starfoil_b_selection_and_lore",
+      "new_run_chinese_crew_name_position"
+    ],
+    "layout_stage_native": [
+      "engine_description",
+      "sensor_description",
+      "credits_headings",
+      "announcement_open_scroll_return_close",
+      "fort_dialogue",
+      "deploy_select_arrive",
+      "recall_arrive",
+      "merchant_purchase",
+      "merchant_repair"
+    ],
+    "layout_stage_evidence_inheritance": "Final changes after this stage affect only 156 gossip string records and a single missing-gossip fallback branch; layout and the other scene renderers are unchanged.",
+    "changed_story_objects_rendered": 21,
+    "story_method": "Private fixture makes reviewed encounter objects selectable in the native game; it is absent from installed/released resources.",
+    "gossip_final_native_samples": 4,
+    "gossip_native_pool": "generic",
+    "gossip_all_four_pools_static_reviewed": 156,
+    "announcement_scroll_actions": {
+      "down": 12,
+      "up": 14,
+      "responsive": true,
+      "fps_benchmark_performed": false
+    },
+    "purchase": {
+      "item": "灭火器",
+      "quantity_before": 1,
+      "quantity_after": 2,
+      "scrap_before": 15,
+      "scrap_after": 13
+    },
+    "repair": {
+      "hull_before": 29,
+      "hull_after": 30,
+      "scrap_before": 15,
+      "scrap_after": 12,
+      "stock_before": 10,
+      "stock_after": 9
+    },
+    "installer_gui_roundtrip": [
+      "install",
+      "restore",
+      "reinstall"
+    ],
+    "embedded_close_button_verified": true,
+    "test_saves_restored": true,
+    "personal_progress_preserved": true,
+    "autosave_preserved": true,
+    "score_preserved": true,
+    "limits": [
+      "Not every procedural branch or faction gossip was naturally encountered.",
+      "Not a measured frame-time or all-resolution benchmark.",
+      "Previous saved personal names are deliberately preserved."
+    ]
+  },
+  "screenshots": [
+    {
+      "image": "docs/images/installer.jpg",
+      "sha256": "8f53e5fa4f3de2e9f970cc98ddfe9eaf8c1a9f470b377313d100d133a4eae6c1"
+    },
+    {
+      "image": "docs/images/main-menu.jpg",
+      "sha256": "6e7d302b3516505813fb5cd745b0f8cb870a76ffaec6649424959cc2d494fa4e"
+    },
+    {
+      "image": "docs/images/engine.jpg",
+      "sha256": "bbb8af1a5fe50f2da4022b1839500f2f6b2b9a4a50c38601a17a70f2e7290dc0"
+    },
+    {
+      "image": "docs/images/sensor.jpg",
+      "sha256": "22a2fe31b5de4b524ca63daee2fb1701748ad27564d39322fbaece5249f65237"
+    },
+    {
+      "image": "docs/images/crew.jpg",
+      "sha256": "2ccfc609488ab4e089f645d9b35bd4701575d8fcbdfc1b1bdccc1011d9746e76"
+    },
+    {
+      "image": "docs/images/starfoil-b.jpg",
+      "sha256": "2ba5fac7d73db013972280a26fa5c73451cf18d7a2de850a0af0c0eac5adf818"
+    },
+    {
+      "image": "docs/images/announcement.jpg",
+      "sha256": "773f57d858d301edc753a76a12126fcb3c0e0b2eb33f11a7f9562f81fc9edfd7"
+    },
+    {
+      "image": "docs/images/announcement-scroll.jpg",
+      "sha256": "ccdbf6bd3e54eb4cf558789163a67b89bbd97a293e10e4d2c55e5f557b0bc45a"
+    },
+    {
+      "image": "docs/images/deployment.jpg",
+      "sha256": "4b86920496cb52d73a9dac5f36da607fd467795c861ec7b3dc00619596ef1373"
+    },
+    {
+      "image": "docs/images/recall.jpg",
+      "sha256": "a85184e90d98f399436218b841ebf965a3c07134cd49958d5c092eed1affd2ad"
+    },
+    {
+      "image": "docs/images/shop-purchase.jpg",
+      "sha256": "811e830a32c4696c8bb06ead8969f4bd6f531ed2538180aa470eefda4b92cbfd"
+    },
+    {
+      "image": "docs/images/shop-repair.jpg",
+      "sha256": "7e7327fbd92bced0298574b0f6f8254a15d395105785e077c5c77541ac8cac24"
+    },
+    {
+      "image": "docs/images/install-success.jpg",
+      "sha256": "89b2175d1dd34382cc120d7e4d25abf320507fbfca50490d2a2138292561c34c"
+    },
+    {
+      "image": "docs/images/restore-success.jpg",
+      "sha256": "e8ebea3455ba2edc4303cd7b13eaf8d9793c00e27a8a7788922d573b1d27e925"
+    },
+    {
+      "image": "docs/images/reinstall-success.jpg",
+      "sha256": "b098ff9c09c1f19e54234c90edf480e4ecc8983683bda81786352982024b7158"
+    }
+  ]
+}

@@ -3,11 +3,13 @@ import argparse
 import json
 from pathlib import Path
 import shutil
-from payload_format import ORIGINAL_SHA, ORIGINAL_FILES, PAYLOAD_FILES, build_delta, sha
+from payload_format import SUPPORTED_ORIGINALS, ORIGINAL_FILES, PAYLOAD_FILES, build_delta, sha
 
 def build(original, package, output, version):
     original, package, output = map(Path, (original, package, output))
-    assert sha(original / 'data.win') == ORIGINAL_SHA, 'Unverified original game version'
+    original_sha = sha(original / 'data.win')
+    assert original_sha in SUPPORTED_ORIGINALS, 'Unverified original game version'
+    supported = SUPPORTED_ORIGINALS[original_sha]
     output.mkdir(parents=True, exist_ok=True)
     allowed = {'payload.json', 'engine.delta.gz', *PAYLOAD_FILES}
     for path in output.rglob('*'):
@@ -23,8 +25,9 @@ def build(original, package, output, version):
         shutil.copyfile(package / name, target)
         files.append({'path': name, 'sha256': sha(target), 'bytes': target.stat().st_size})
     compat_path = Path(__file__).parent / 'compatibility' / 'c35.json'
-    compatibility = json.loads(compat_path.read_text('utf8')) if compat_path.exists() else {}
-    manifest = {'schema': 1, 'game': 'Void War', 'game_version': '1.5.2b', 'steam_build_id': '25669267',
+    compatibility = (json.loads(compat_path.read_text('utf8'))
+                     if supported['game_version'] == '1.5.2b' and compat_path.exists() else {})
+    manifest = {'schema': 1, 'game': 'Void War', **supported,
                 'release_version': version, 'language_id': 3,
                 'original_files': [{'path': p, 'sha256': sha(original / p)} for p in ORIGINAL_FILES],
                 'delta': delta, 'delta_sha256': sha(output / 'engine.delta.gz'), 'files': files,
